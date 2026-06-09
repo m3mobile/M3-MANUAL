@@ -344,7 +344,7 @@ code[class*='language-'] {
 
 .manualHomeHeader h1 {
   max-width: 780px;
-  margin-top: 0.65rem;
+  margin-top: 0;
 }
 
 .manualHomeSection,
@@ -364,27 +364,16 @@ code[class*='language-'] {
   background: var(--manual-surface);
 }
 
-.manualKicker {
-  display: inline-flex;
-  align-items: center;
-  min-height: 24px;
-  padding: 0 0.55rem;
-  border: 1px solid var(--manual-border);
-  border-radius: 999px;
-  color: var(--manual-accent);
-  background: var(--manual-accent-soft);
-  font-size: 0.74rem;
-  font-weight: 780;
-  line-height: 1;
-  text-transform: uppercase;
-}
-
 .manualLead {
   max-width: 760px;
   margin: 0.85rem 0 0;
   color: var(--manual-muted);
   font-size: 1rem;
   line-height: 1.7;
+}
+
+.manualEntryHeader .manualLead {
+  margin: 0;
 }
 
 .manualSectionHeader {
@@ -430,6 +419,10 @@ code[class*='language-'] {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.manualCardGrid--apps {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
 .manualCard {
   position: relative;
   display: flex;
@@ -461,6 +454,13 @@ code[class*='language-'] {
   padding: 1rem 1.15rem;
 }
 
+.manualCard--appPortal {
+  min-height: 172px;
+  justify-content: flex-start;
+  padding: 1.25rem 1.35rem;
+  padding-right: 5.4rem;
+}
+
 .manualCard:hover {
   border-color: var(--manual-accent);
   color: var(--manual-text);
@@ -485,6 +485,35 @@ code[class*='language-'] {
   line-height: 1.35;
 }
 
+.manualCardIcon {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  border: 1px solid var(--manual-border);
+  border-radius: 12px;
+  background: var(--manual-accent-soft);
+}
+
+.manualCardIcon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.manualCardIcon--text {
+  color: var(--manual-accent);
+  font-size: 0.82rem;
+  font-weight: 820;
+  letter-spacing: 0.02em;
+}
+
 .manualCard--portal .manualCardTitle {
   font-size: 1.24rem;
 }
@@ -494,6 +523,10 @@ code[class*='language-'] {
   font-size: 1.05rem;
 }
 
+.manualCard--appPortal .manualCardTitle {
+  font-size: 1.12rem;
+}
+
 .manualCardText {
   color: var(--manual-muted);
   font-size: 0.92rem;
@@ -501,10 +534,15 @@ code[class*='language-'] {
 }
 
 .manualCardAction {
+  align-self: flex-end;
   margin-top: auto;
   color: var(--manual-accent);
   font-size: 0.86rem;
   font-weight: 720;
+}
+
+.manualCard--appPortal .manualCardAction {
+  align-self: flex-start;
 }
 
 .manualNotice {
@@ -512,6 +550,14 @@ code[class*='language-'] {
   border: 1px solid var(--manual-border);
   border-radius: 8px;
   background: var(--manual-surface);
+}
+
+.manualAppPortal .manualHomeHeader {
+  padding-bottom: 2rem;
+}
+
+.manualAppSection {
+  margin-top: 1.8rem;
 }
 
 @media (max-width: 996px) {

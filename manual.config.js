@@ -1,29 +1,11 @@
 const manualCatalog = {
   ui: {
-    openDocumentLabel: '문서 열기',
+    openDocumentLabel: 'More >',
     documentMetaLabel: 'Document',
     defaultConditionSectionTitle: '조건 선택',
     defaultLinkedDocsTitle: '기본 문서',
     defaultLinkedDocsDescription: '현재 문서 묶음에 포함된 공통 문서입니다.'
   },
-  homeCards: [
-    {
-      id: 'app-manual',
-      meta: 'APP',
-      title: 'APP Manual',
-      description: 'ScanEmul을 포함한 앱 사용자 매뉴얼로 이동합니다. 앱별 문서와 조건별 목차는 각 진입 페이지에서 분리됩니다.',
-      group: 'apps',
-      targetId: 'scanemul'
-    },
-    {
-      id: 'm3-sdk-manual',
-      meta: 'SDK',
-      title: 'M3 SDK Manual',
-      description: 'M3 SDK 개발자 문서로 이동합니다. SDK 문서 묶음별 목차는 독립적으로 관리됩니다.',
-      group: 'developers',
-      targetId: 'sdk-a'
-    }
-  ],
   apps: [
     {
       id: 'scanemul',
@@ -33,7 +15,6 @@ const manualCatalog = {
       summary: '',
       docs: [
         {id: 'index', label: '진입 페이지'},
-        {id: 'overview', label: '개요'},
         {id: 'basic-usage', label: '기본 사용'}
       ],
       conditionSection: {
@@ -103,7 +84,7 @@ const manualCatalog = {
       label: 'SDK 문서 A',
       path: 'developers/sdk-a',
       sidebarId: 'sdkA',
-      summary: 'SDK 문서 A의 개발자 가이드입니다.',
+      summary: 'SDK 문서 A 개발자 가이드입니다.',
       docs: [
         {id: 'index', label: '소개'},
         {id: 'quickstart', label: '빠른 시작'},
@@ -115,7 +96,7 @@ const manualCatalog = {
       label: 'SDK 문서 B',
       path: 'developers/sdk-b',
       sidebarId: 'sdkB',
-      summary: 'SDK 문서 B의 개발자 가이드입니다.',
+      summary: 'SDK 문서 B 개발자 가이드입니다.',
       docs: [
         {id: 'index', label: '소개'},
         {id: 'integration', label: '연동'},

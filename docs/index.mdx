@@ -1,0 +1,33 @@
+import {ManualHomePage, ManualHomeSection, ManualHomeCard} from '@site/src/components/ManualCards';
+
+<ManualHomePage
+  title="Welcome!"
+  lead="Access the latest tech docs for M3 App, SDK, Firmware and OS release notes all in one place."
+>
+
+<ManualHomeSection
+  title="Manuals"
+>
+  <ManualHomeCard
+    title="APP Manual"
+    description="M3 MOBILE Application guide"
+    to="/app/"
+  />
+  <ManualHomeCard
+    title="M3 SDK Manual"
+    description="Unified M3 SDK documentation and download"
+    to="/docs/developers/sdk-a/"
+  />
+  <ManualHomeCard
+    title="OS Release Note"
+    description="OS update information and manuals"
+    to="/docs/developers/sdk-a/"
+  />
+  <ManualHomeCard
+    title="FW Release Note"
+    description="FW update information and manuals"
+    to="/docs/developers/sdk-a/"
+  />
+</ManualHomeSection>
+
+</ManualHomePage>

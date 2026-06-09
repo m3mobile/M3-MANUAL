@@ -37,7 +37,8 @@ const config = {
       {
         docs: {
           routeBasePath: 'docs',
-          sidebarPath: './sidebars.js'
+          sidebarPath: './sidebars.js',
+          exclude: ['index.mdx', 'app/index.mdx']
         },
         blog: false,
         theme: {

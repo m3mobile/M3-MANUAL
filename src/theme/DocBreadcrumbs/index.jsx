@@ -58,7 +58,7 @@ function buildManualBreadcrumbs(metadata, sidebarBreadcrumbs) {
 
   if (app) {
     const condition = findCondition(app, normalizedId);
-    const base = [breadcrumb('APP')];
+    const base = [breadcrumb('APP', '/app/')];
 
     if (condition || normalizedId !== app.path) {
       base.push(breadcrumb(app.label, docsUrl(app.path)));
@@ -110,7 +110,7 @@ function BreadcrumbsItemLink({children, href, isLast}) {
   }
 
   return href ? (
-    <Link className={className} href={href}>
+    <Link className={className} to={href}>
       <span>{children}</span>
     </Link>
   ) : (

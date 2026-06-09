@@ -7,13 +7,8 @@ const groups = {
   developers: manualCatalog.developerDocs
 };
 
-const groupLabels = {
-  apps: 'APP',
-  developers: 'Developers'
-};
-
 const ui = {
-  openDocumentLabel: '문서 열기',
+  openDocumentLabel: 'More >',
   documentMetaLabel: 'Document',
   defaultConditionSectionTitle: '조건 선택',
   defaultLinkedDocsTitle: '기본 문서',
@@ -62,7 +57,6 @@ export default function ManualEntry({group, id, showLinkedDocs = true}) {
     <div className="manualEntry">
       {bundle.summary && (
         <div className="manualEntryHeader">
-          <span className="manualKicker">{groupLabels[group]}</span>
           <p className="manualLead">{bundle.summary}</p>
         </div>
       )}
